@@ -1,0 +1,99 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF5F8;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #AE2F62;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* Conteúdo principal */
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* Formulário */
+.formulario,
+.lista {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #AE2F62;
+    margin-bottom: 20px;
+}
+
+/* Campos */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #F2B8CF;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #AE2F62;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Botão */
+button {
+    background-color: #AE2F62;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #8E234E;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    main {
+        width: 92%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Tasks</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Pink Tasks</h1>
+        <p>Organize suas tarefas com leveza!</p>
+    </header>
+
+    <main>
+
+        <section class="formulario">
+            <h2>Nova tarefa</h2>
+
+            <form id="form-tarefa">
+
+                <input type="text" id="titulo" placeholder="Título da tarefa" required>
+
+                <textarea id="descricao" placeholder="Descrição da tarefa"></textarea>
+
+                <select id="prioridade">
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <button type="submit">Adicionar tarefa</button>
+
+            </form>
+        </section>
+
+        <section class="lista">
+            <h2>Minhas tarefas</h2>
+
+            <div id="lista-tarefas">
+                <!-- As tarefas aparecerão aqui -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
