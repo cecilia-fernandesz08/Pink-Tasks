@@ -1,0 +1,29 @@
+{
+  "name": "pink-tasks",
+  "version": "1.0.0",
+  "description": "Uma aplicação web para cadastrar, organizar, acompanhar e gerenciar tarefas do dia a dia.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cecilia-fernandesz08/Pink-Tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cecilia-fernandesz08/Pink-Tasks/issues"
+  },
+  "homepage": "https://github.com/cecilia-fernandesz08/Pink-Tasks#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
