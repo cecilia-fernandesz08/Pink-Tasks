@@ -4,50 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pink Tasks</title>
+
+    <title>Pink Tasks | Gerenciador de tarefas</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Pink Tasks</h1>
-        <p>Organize suas tarefas com leveza!</p>
-    </header>
+    <div class="dashboard">
 
-    <main>
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
 
-        <section class="formulario">
-            <h2>Nova tarefa</h2>
-
-            <form id="form-tarefa">
-
-                <input type="text" id="titulo" placeholder="Título da tarefa" required>
-
-                <textarea id="descricao" placeholder="Descrição da tarefa"></textarea>
-
-                <select id="prioridade">
-                    <option value="Baixa">Baixa</option>
-                    <option value="Média">Média</option>
-                    <option value="Alta">Alta</option>
-                </select>
-
-                <button type="submit">Adicionar tarefa</button>
-
-            </form>
-        </section>
-
-        <section class="lista">
-            <h2>Minhas tarefas</h2>
-
-            <div id="lista-tarefas">
-                <!-- As tarefas aparecerão aqui -->
+            <div class="logo">
+                <span class="logo-icon">✿</span>
+                <h2>Pink Tasks</h2>
             </div>
 
-        </section>
+            <p class="menu-label">MENU PRINCIPAL</p>
 
-    </main>
+            <nav>
+                <a href="#" class="menu-item ativo">
+                    <span>▦</span> Dashboard
+                </a>
+
+                <a href="#form-tarefa" class="menu-item">
+                    <span>＋</span> Nova tarefa
+                </a>
+
+                <a href="#lista-tarefas" class="menu-item">
+                    <span>☷</span> Minhas tarefas
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>♡</span>
+                <p>Organize seu dia<br>com leveza!</p>
+            </div>
+
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo">
+
+            <header class="topbar">
+                <div>
+                    <h1>Meu Dashboard</h1>
+                    <p>Bem-vinda ao seu espaço de organização!</p>
+                </div>
+
+                <div class="perfil">
+                    <div class="avatar">P</div>
+                    <span>Meu espaço</span>
+                </div>
+            </header>
+
+            <!-- BOAS-VINDAS -->
+            <section class="boas-vindas">
+                <div>
+                    <span class="saudacao">OLÁ, SEJA BEM-VINDA! ♡</span>
+                    <h2>Vamos organizar seu dia?</h2>
+                    <p>Pequenos passos também levam a grandes conquistas.</p>
+                </div>
+
+                <div class="decoracao">✿</div>
+            </section>
+
+            <!-- ÁREA DE CADASTRO -->
+            <section class="formulario">
+                <div class="titulo-secao">
+                    <div>
+                        <span class="subtitulo">ORGANIZAÇÃO</span>
+                        <h2>Nova tarefa</h2>
+                    </div>
+                    <span class="icone-secao">＋</span>
+                </div>
+
+                <form id="form-tarefa">
+
+                    <div class="campo">
+                        <label for="titulo">Título da tarefa</label>
+                        <input
+                            type="text"
+                            id="titulo"
+                            placeholder="Ex: Estudar programação"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="descricao">Descrição</label>
+                        <textarea
+                            id="descricao"
+                            placeholder="Adicione detalhes sobre sua tarefa..."
+                        ></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade">
+                            <option value="Baixa">Baixa</option>
+                            <option value="Média">Média</option>
+                            <option value="Alta">Alta</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">
+                        + Adicionar tarefa
+                    </button>
+
+                </form>
+            </section>
+
+            <!-- LISTA DE TAREFAS -->
+            <section class="lista">
+
+                <div class="titulo-secao">
+                    <div>
+                        <span class="subtitulo">SEU PLANEJAMENTO</span>
+                        <h2>Minhas tarefas</h2>
+                    </div>
+
+                    <span class="icone-lista">☷</span>
+                </div>
+
+                <div id="lista-tarefas">
+                    <!-- As tarefas aparecerão aqui -->
+                </div>
+
+            </section>
+
+            <footer>
+                Pink Tasks © 2026 · Feito com carinho ♡
+            </footer>
+
+        </main>
+
+    </div>
 
     <script src="script.js"></script>
 

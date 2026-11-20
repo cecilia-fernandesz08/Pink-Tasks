@@ -1,5 +1,8 @@
 
-/* Configurações gerais */
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,63 +10,284 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FFF5F8;
-    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #FFF5F8;
+    color: #39313A;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #AE2F62;
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   MENU LATERAL
+========================= */
+
+.sidebar {
+    width: 245px;
+    background: #FFFFFF;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #F4E3EA;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 55px;
+}
+
+.logo h2 {
+    color: #AE2F62;
+    font-size: 23px;
+}
+
+.logo-icon {
+    background: #FCE4ED;
+    color: #AE2F62;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.menu-label {
+    color: #B7A5AE;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #81747C;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.menu-item span {
+    font-size: 20px;
+}
+
+.menu-item:hover,
+.menu-item.ativo {
+    background: #FCE7EF;
+    color: #AE2F62;
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    background: #FFF2F7;
+    border-radius: 14px;
+    padding: 20px;
+    color: #AE2F62;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sidebar-footer span {
+    font-size: 25px;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+.conteudo {
+    flex: 1;
+    min-width: 0;
+    max-width: 1500px;
+    padding: 35px 45px;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    color: #39313A;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #988A92;
+    font-size: 14px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F6C4D7;
+    color: #AE2F62;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* =========================
+   BOAS-VINDAS
+========================= */
+
+.boas-vindas {
+    background: linear-gradient(110deg, #AE2F62, #DA7099);
     color: white;
-    text-align: center;
     padding: 30px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    overflow: hidden;
 }
 
-header h1 {
-    font-size: 32px;
+.saudacao {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    opacity: 0.85;
+}
+
+.boas-vindas h2 {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.boas-vindas p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.decoracao {
+    font-size: 95px;
+    opacity: 0.25;
+    padding-right: 15px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.formulario,
+.lista {
+    background: #FFFFFF;
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #F5E6EC;
+    box-shadow: 0 5px 20px rgba(174, 47, 98, 0.04);
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    font-weight: 700;
+    color: #C17A97;
+}
+
+.titulo-secao h2 {
+    color: #AE2F62;
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.icone-secao,
+.icone-lista {
+    background: #FCE7EF;
+    color: #AE2F62;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.campo {
+    margin-bottom: 19px;
+}
+
+.campo label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #62545D;
     margin-bottom: 8px;
 }
 
-/* Conteúdo principal */
-main {
-    width: 90%;
-    max-width: 800px;
-    margin: 30px auto;
-}
-
-/* Formulário */
-.formulario,
-.lista {
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
-    color: #AE2F62;
-    margin-bottom: 20px;
-}
-
-/* Campos */
 input,
 textarea,
 select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #F2B8CF;
-    border-radius: 8px;
-    font-size: 15px;
+    padding: 13px 14px;
+    border: 1px solid #EEDCE4;
+    border-radius: 9px;
+    background: #FFFCFD;
+    color: #39313A;
+    font-family: inherit;
+    font-size: 14px;
     outline: none;
+    transition: 0.3s;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
     border-color: #AE2F62;
+    box-shadow: 0 0 0 3px rgba(174, 47, 98, 0.08);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #B6AAB1;
 }
 
 textarea {
@@ -71,29 +295,151 @@ textarea {
     min-height: 90px;
 }
 
-/* Botão */
+/* =========================
+   BOTÕES
+========================= */
+
 button {
-    background-color: #AE2F62;
+    background: #AE2F62;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 13px 22px;
+    border-radius: 9px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 button:hover {
-    background-color: #8E234E;
+    background: #8E234E;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(174, 47, 98, 0.17);
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    main {
-        width: 92%;
+/* =========================
+   TAREFAS
+========================= */
+
+#lista-tarefas {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.tarefa {
+    background: #FFFAFC;
+    border: 1px solid #F3E0E8;
+    border-left: 4px solid #AE2F62;
+    border-radius: 11px;
+    padding: 19px;
+    transition: 0.3s;
+}
+
+.tarefa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(174, 47, 98, 0.07);
+}
+
+.tarefa h3 {
+    color: #AE2F62;
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.tarefa p {
+    color: #81747C;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #B29AA6;
+    font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 190px;
     }
 
-    header h1 {
-        font-size: 26px;
+    .conteudo {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 18px;
+    }
+
+    .menu-label,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .menu-item {
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .conteudo {
+        padding: 20px 15px;
+    }
+
+    .topbar h1 {
+        font-size: 21px;
+    }
+
+    .perfil span {
+        display: none;
+    }
+
+    .boas-vindas {
+        padding: 22px;
+    }
+
+    .boas-vindas h2 {
+        font-size: 19px;
+    }
+
+    .decoracao {
+        font-size: 55px;
+    }
+
+    .formulario,
+    .lista {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
     }
 }
